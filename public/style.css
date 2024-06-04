@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --primary: #028391;
+    --secondary: #13cbdfb9;
+    --body-background: #FFF9D0;
+    --text-primary: black;
+    --text-secondary: black;
+    --banner-text-color: white;
+    --button-background: #D9D9D9;
+    --banner-background: #05A6B8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "lemon";
+}
+
+body {
+    background-color: var(--body-background);
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.header {
+    position: relative;
+    top: 0px
+}
+
+.header .circle1 {
+    background-color: var(--primary);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    position: relative;
+    left: -60px;
+    top: -40px;
+    z-index: -1;
+}
+
+.header .circle2 {
+    background-color: var(--secondary);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    position: absolute;
+    top: -80px;
+    left: -10px;
+}
+
+.mainContent {
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainContent .content {
+    width: 100%;
+}
+
+.mainContent .content h1 {
+    font-size: 20px;
+}
+
+.mainContent .content div.firstImage {
+    margin-top: 50px;
+}
+
+.mainContent .content .pageDescription {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+.defaultButton {
+    background-color: var(--button-background);
+    display: block;
+    padding: 17px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 50px;
+    color: var(--text-primary);
+}
+
+.defaultButton:visited {
+    color: var(--text-secondary);
+}
+
+.mainContent .content form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.mainContent .content form input,
+.mainContent .content form textarea {
+    margin-top: 20px;
+    padding: 17px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    color: var(--primary);
+}
+
+.mainContent .content form textarea::placeholder,
+.mainContent .content form input::placeholder {
+    color: var(--primary);
+}
+
+.mainContent .content form .errorMessage {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.banner {
+    background-color: var(--banner-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 330px;
+    z-index: -2;
+}
+
+.banner img.profile {
+    width: 100px;
+    height: 100px;
+    margin-top: 165px;
+}
+
+.banner h1 {
+    color: var(--banner-text-color);
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.dashboard {
+    margin-top: 165px;
+}
+.dashboard .card {
+    margin-top: 20px;
+}
+.dashboard .card .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.dashboard a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+.dashboard .card .card-header a {
+    color: var(--primary-text-color);
+}
+.dashboard .card .card-header h2 {
+    font-size: 16px;
+}
+
+.dashboard .card-body {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard .card-body table {
+    border-collapse: collapse;
+}
+
+.dashboard .card-body table .header {
+    background-color: var(--primary);
+    color: var(--banner-text-color);
+    text-align: left;
+}
+
+.dashboard .card-body table {
+    width: 100%;
+    color: var(--banner-text-color);
+}
+
+.dashboard .card-body table td,
+.dashboard .card-body table th{
+    font-size: 13px;
+    text-align: left;
+    padding: 10px;
+}
+.dashboard .card-body table th{
+    font-size: 16px;
+}
+
+.dashboard .card-body table tr.odd {
+    background-color: white;
+    color: black;
+}
+.dashboard .card-body table tr.even {
+    background-color: var(--primary);
+    color: white;
+}
+.dashboard .card-footer{
+    background-color: var(--primary);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+}
+.footer{
+    background-color: var(--banner-background);
+    color: var(--banner-text-color);
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+/* For Desktop View */
+@media only screen and (min-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    #root {
+        max-width: 500px;
+        overflow: hidden;
+    }
+}
